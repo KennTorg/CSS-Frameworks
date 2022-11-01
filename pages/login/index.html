@@ -8,5 +8,73 @@
         <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
         <title>Social Media | Login</title>
     </head>
-    <body></body>
+    <body class="bg-light">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/index.html">Logo</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="/index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/pages/profile/index.html">Profile</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/pages/login/index.html">Login</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                        <form class="d-flex">
+                            <input
+                                class="form-control me-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                            />
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--LOGIN FORM -->
+        <div class="container card col-4 shadow mt-5">
+            <form>
+                <!-- Email input -->
+                <div class="form-outline mb-4 pt-4">
+                    <input type="email" id="email" class="form-control" />
+                    <label class="form-label" for="email">Email</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="password" class="form-control" />
+                    <label class="form-label" for="password">Password</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                <!-- Register buttons -->
+                <div class="text-center">
+                    <p>Not a member yet? <a href="#!">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </body>
 </html>
