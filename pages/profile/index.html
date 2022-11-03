@@ -9,10 +9,13 @@
         <title>Social Media</title>
     </head>
     <body class="bg-light">
+        <!-- HEADER -->
         <header>
+            
             <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <!-- Nav -->
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/index.html">Logo</a>
+                    <a class="navbar-brand" href="/">Logo</a>
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -24,7 +27,7 @@
                     >
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    <!-- Nav collaps -->
                     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                         <ul class="navbar-nav mr-auto">
                           <li class="nav-item active">
@@ -38,7 +41,7 @@
                           </li>
                         </ul>
                       </div>
-
+                      <!--Search -->
                         <form class="d-flex">
                             <input
                                 class="form-control me-2"
@@ -52,39 +55,41 @@
                 </div>
             </nav>
         </header>
+        <!-- PROFILE MAIN -->
         <main class="home-main-md">
             <section class="row m-3">
                 <div class="col column-1 d-none d-md-block">
                     <div class="p-3 bg-white shadow rounded min-vh-100 d-flex justify-content-center">
-                        <ul class="nav flex-column pb-3 mb-3">
-                            <li class="nav-item">
-                                <a href="/index.html" class="nav-link px-2 text-muted">Home</a>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/pages/profile/index.html" class="nav-link px-2 text-muted"
-                                    >Profile</a
-                                >
+                              <a class="nav-link" href="/pages/profile/">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/pages/login/index.html" class="nav-link px-2 text-muted"
-                                    >Login</a
-                                >
+                              <a class="nav-link" href="/pages/login/">Login</a>
                             </li>
-                        </ul>
+                          </ul>
                     </div>
                 </div>
-
+                
                 <div class="col-md-6 column-2">
+                    <!-- Profile Image & banner -->
                     <div class="card shadow">
+                        <!-- Banner -->
                         <div class="bg-image rounded-top text-white d-flex flex-row" style="background-image: url('https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); height:200px;">
                             <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+                                <!--Profile img -->
                             <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" alt="" class="img-fluid rounded-circle mt-4 mb-2" style="width: 150px; z-index: 1;">
                             
                             </div>
+                            <!-- Username -->
                             <div class="ms-3" style="margin-top: 130px;">
                                 <h4>Username Surname</h4>
                             </div>
                         </div>
+                        <!-- About user -->
                         <div class="card-body m-4 text-black">
                             <div class="mb-3">
                                 <h4 class="m-3">About</h4>
@@ -97,8 +102,9 @@
                               </div>
                         </div>
                     </div>
-
+                    <!-- Feed -->
                     <div class="Feed flex-column bg-white shadow rounded mt-3">
+                        <!-- Create post -->
                         <div class="p-3 bg-white rounded d-flex justify-content-center">
                             <div class="post-container">
                                 <div class="mb-3">
@@ -108,6 +114,7 @@
                                 <button class="btn btn-primary">Post</button>
                               </div>
                           </div>
+                          <!-- Post Feed -->
                         <div class="heading text-center mt-4">
                         <h3>Feed</h3>
                         </div>
@@ -137,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Contacts -->
                 <div class="col column-3 d-none d-md-block">
                     <div class="p-3 bg-white shadow rounded min-vh-100 text-center">
                         <h3>Contacts</h3>
@@ -180,6 +187,7 @@
                     </div>
                 </div>
             </section>
+            <!-- FOOTER-->
             <div class="container">
                 <footer class="py-3 my-4">
                     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
