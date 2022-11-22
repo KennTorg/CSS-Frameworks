@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/dist/css/styles.css" />
         <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
-        <title>Social Media | Login</title>
+        <title>Social Media | Register</title>
     </head>
     <body class="bg-light">
         <!--HEADER -->
@@ -56,11 +56,16 @@
                 </div>
             </nav>
         </header>
-        <!--LOGIN FORM -->
+        <!--REGISTER FORM -->
         <div class="container card col-lg-4 shadow mt-5">
             <form>
-                <!-- Email input -->
+                <!--Name Input-->
                 <div class="form-outline mb-4 pt-4">
+                    <input required name="name" type="name" id="name" class="form-control"/>
+                    <label class="form-label" for="name">Name</label>
+                </div>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
                     <input required name="email" type="email" id="email" class="form-control" />
                     <label class="form-label" for="email">Email</label>
                 </div>
@@ -71,12 +76,16 @@
                     <label class="form-label" for="password">Password</label>
                 </div>
 
-                <!-- Submit button -->
-                <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                <!-- Avatar -->
 
-                <!-- Register button -->
+                <!-- Banner -->
+                
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+
+                <!-- Login? button -->
                 <div class="text-center">
-                    <p>Not a member yet? <a href="/pages/register">Register</a></p>
+                    <p>Go to <a href="/pages/login">Login</a></p>
                 </div>
             </form>
         </div>
