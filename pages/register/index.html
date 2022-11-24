@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/dist/css/styles.css" />
         <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="/src/js/index.mjs" defer type="module"></script>
         <title>Social Media | Register</title>
     </head>
     <body class="bg-light">
@@ -14,7 +15,7 @@
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <!-- Nav -->
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/index.html">Logo</a>
+                    <a class="navbar-brand" href="/">Logo</a>
                     <!--Navbar-->
                     <button
                         class="navbar-toggler"
@@ -58,34 +59,43 @@
         </header>
         <!--REGISTER FORM -->
         <div class="container card col-lg-4 shadow mt-5">
-            <form>
+            
+            <form id="registerForm">
                 <!--Name Input-->
                 <div class="form-outline mb-4 pt-4">
-                    <input required name="name" type="name" id="name" class="form-control"/>
+                    <input name="name" type="name" id="name" class="form-control" required pattern="^[\w]+$" title="User name must only contain lower case and upper case letters, numbers and underscore(_). Example: My_user1234"/>
                     <label class="form-label" for="name">Name</label>
                 </div>
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input required name="email" type="email" id="email" class="form-control" />
+                    <input name="email" type="email" id="email" class="form-control" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @(stud.)noroff.no domains are allowed to register."/>
                     <label class="form-label" for="email">Email</label>
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
-                    <input required name="password" type="password" id="password" class="form-control" />
+                    <input name="password" type="password" id="password" class="form-control" required minlength="8"/>
                     <label class="form-label" for="password">Password</label>
                 </div>
 
                 <!-- Avatar -->
+                <div class="form-outline mb-4">
+                    <input name="avatar" type="url" id="avatar" class="form-control">
+                    <label class="form-label" for="avatar">Avatar</label>
+                </div>
 
                 <!-- Banner -->
+                <div class="form-outline mb-4">
+                    <input name="banner" type="url" id="banner" class="form-control">
+                    <label class="form-label" for="banner">Banner</label>
+                </div>
                 
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
 
                 <!-- Login? button -->
                 <div class="text-center">
-                    <p>Go to <a href="/pages/login">Login</a></p>
+                    <p>Go to <a href="/pages/login/">Login</a></p>
                 </div>
             </form>
         </div>
