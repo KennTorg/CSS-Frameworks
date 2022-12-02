@@ -5,6 +5,11 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/posts";
 const method = "post";
 
+/**
+ * Creates a new post.
+ * @param {string} postData - input information.
+ */
+
 export async function createPost(postData) {
     const createPostURL = API_SOCIAL_URL + action;
 

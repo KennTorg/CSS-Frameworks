@@ -4,6 +4,10 @@ import { authFetch } from "../authFetch.mjs";
 
 const action = "/posts";
 
+/**
+ * Gets defaults numbers of posts from the API(100 posts).
+ */
+
 export async function getPosts() {
     const updatePostURL = `${API_SOCIAL_URL}${action}`;
 
@@ -11,6 +15,11 @@ export async function getPosts() {
 
     return await response.json();
 }
+
+/**
+ * Calling the post with ID from the API.
+ * @param {number} id of the the post.
+ */
 
 export async function getPost(id) {
     if (!id) {

@@ -1,5 +1,9 @@
 import { load } from "../storage/index.mjs";
 
+/**
+ * Sets the headers.
+ */
+
 export function headers() {
     const token = load("token");
 
@@ -8,6 +12,12 @@ export function headers() {
         Authorization: `Bearer ${token}`
     };
 }
+
+/**
+ * Authorization fetch for create, read, delete and update.
+ * @param {string} url
+ * @param {string} options
+ */
 
 export async function authFetch(url, options = {}) {
     return fetch(url, {

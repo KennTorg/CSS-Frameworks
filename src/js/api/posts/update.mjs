@@ -5,6 +5,11 @@ import { authFetch } from "../authFetch.mjs";
 const action = "/posts";
 const method = "put";
 
+/**
+ * Updates a post
+ * @param {string} postData - Input information.
+ */
+
 export async function updatePost(postData) {
     // Error for missing post id.
     if (postData.id) {
