@@ -8,9 +8,9 @@ if (path === "/pages/login/") {
     listeners.setLoginFormListener();
 } else if (path === "/pages/register/") {
     listeners.setRegisterFormListener();
-} else if (path === "/pages/profile/") {
+} else if (path === "/pages/post/create/") {
     listeners.setCreatePostFormListener;
-} else if (path === "/pages/profile/") {
+} else if (path === "/pages/post/edit/") {
     listeners.setUpdatePostFormListener;
 }
 

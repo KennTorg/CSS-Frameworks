@@ -1,10 +1,9 @@
-import { getPost } from "../api/posts/read.mjs";
-import { updatePost } from "../api/posts/update.mjs";
+import { getPost, updatePost } from "../api/posts/index.mjs";
 
 export async function setUpdatePostFormListener() {
-    const form = document.querySelector("#updatePost");
+    const form = document.querySelector("#editPost");
 
-    const url = URL(location.href);
+    const url = new URL(location.href);
     const id = url.searchParams.get("id");
 
     if (form) {
