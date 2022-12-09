@@ -1,4 +1,4 @@
-export function singlePost(postData) {
+/*export function singlePost(postData) {
   return `
   <div class="card mt-3">
     <div class="d-flex justify-content-between p-2 px-3">
@@ -22,3 +22,4 @@ export function singlePost(postData) {
   </div>
  </div>`;
 }
+*/
