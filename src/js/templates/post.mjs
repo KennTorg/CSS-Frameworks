@@ -70,7 +70,7 @@ export function postTemplate(postData) {
 
   const viewPost = document.createElement("a");
   viewPost.classList = "d-flex m-3 me-5";
-  viewPost.setAttribute("href", `/pages/post/index.html`);
+  viewPost.setAttribute("href", `/pages/post/index.html?id=${id}`);
   viewPost.innerHTML = "View Post";
   postBodyContainer.append(viewPost);
 
