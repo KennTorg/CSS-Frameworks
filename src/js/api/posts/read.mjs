@@ -31,7 +31,9 @@ export async function getPost(id) {
 
   const response = await authFetch(getPostURL);
 
-  return await response.json();
+  const post = await response.json();
+
+  return post;
 }
 
 /**
