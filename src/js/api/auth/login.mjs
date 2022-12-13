@@ -27,5 +27,9 @@ export async function login(profile) {
 
   storage.save("profile", user);
 
-  alert("You are logged in!");
+  if (!accessToken) {
+    alert("The user is NOT registered");
+  } else {
+    location.href = "/pages/profile/";
+  }
 }
