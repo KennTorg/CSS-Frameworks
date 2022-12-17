@@ -1,12 +1,14 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 import { authFetch } from "../authFetch.mjs";
 import * as templates from "../../templates/index.mjs";
+import { renderPostTemplates } from "../../templates/index.mjs";
 
 const action = "/posts";
 const author = "?_author=true";
 
 /**
- * Gets defaults numbers of posts from the API(100 posts).
+ * Gets defaults numbers of posts
+ * @returns 100 posts
  */
 
 export async function getPosts() {
@@ -18,7 +20,7 @@ export async function getPosts() {
 }
 
 /**
- * Calling the post with ID from the API.
+ * Gets the post with ID from the API.
  * @param {number} id of the the post.
  * @returns a single post.
  */
@@ -37,7 +39,7 @@ export async function getPost(id) {
 }
 
 /**
- * Displays the posts on the "/profile/
+ * Displays the posts on "/profile/ feed
  */
 export async function postFeed() {
   const posts = await getPosts();
@@ -46,53 +48,35 @@ export async function postFeed() {
 }
 
 /**
- * Function that displays single post.
+ * displays singlePost
  */
-export async function singlePost() {
+
+export const getSinglePost = async () => {
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const id = params.get("id");
 
   const post = await getPost(id);
   const singlePostContainer = document.querySelector("#single-post");
-  templates.renderPostTemplate(post, singlePostContainer);
-}
-
-/**
- * Function that displays the edited posts.
- */
-/*
-export async function displayEditedPost() {
-  const queryString = document.location.search;
-  const params = new URLSearchParams(queryString);
-  const id = params.get("id");
-
-  const post = await getPost(id);
-  const singlePostContainer = document.querySelector("#");
   renderPostTemplates.renderPostTemplate(post, singlePostContainer);
-}
-*/
+};
 
 /**
- * The function that gets the searched posts.
+ * Gets searched posts
  */
 
-/*
-export async function getSearchedPosts() {
+/* export async function getSearchedPosts() {
   const posts = await getPosts();
   const container = document.querySelector("#posts");
-  renderPostTemplates.renderSearchedPosts(posts, container);
-}
-*/
+  searchFilter.renderSearchedPosts(posts, container);
+} */
 
 /**
- * The function that get the filtered posts.
+ * Gets filtered posts
  */
 
-/*
-export async function getFilteredPosts() {
-  const posts = await postFilter();
+/* export async function getFilteredPosts() {
+  const posts = await getPosts();
   const container = document.querySelector("#posts");
-  renderPostTemplates.renderFilteredPosts(posts, container);
-}
-*/
+  searchFilter.renderFilteredPosts(posts, container);
+} */

@@ -1,1 +1,2 @@
-export * from "./post.mjs";
+export * from "./postFeed.mjs";
+export * from "./singlePost.mjs";
