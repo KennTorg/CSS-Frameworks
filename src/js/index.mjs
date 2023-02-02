@@ -9,9 +9,9 @@ if (path === "/pages/login/") {
 } else if (path === "/pages/register/") {
   listeners.setRegisterFormListener();
 } else if (path === "/pages/post/edit/") {
-  listeners.setUpdatePostFormListener;
+  listeners.setUpdatePostFormListener();
 } else if (path === "/pages/profile/") {
-  listeners.setCreatePostFormListener;
+  listeners.setCreatePostFormListener();
   postMethods.postFeed();
   //postMethods.getSearchedPosts();
   //postMethods.getFilteredPosts();
