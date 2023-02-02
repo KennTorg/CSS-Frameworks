@@ -1,7 +1,6 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 import { authFetch } from "../authFetch.mjs";
 import * as templates from "../../templates/index.mjs";
-import { renderPostTemplates } from "../../templates/index.mjs";
 
 const action = "/posts";
 const author = "?_author=true";
@@ -58,7 +57,7 @@ export const getSinglePost = async () => {
 
   const post = await getPost(id);
   const singlePostContainer = document.querySelector("#single-post");
-  renderPostTemplates.renderPostTemplate(post, singlePostContainer);
+  templates.renderPostTemplates(post, singlePostContainer);
 };
 
 /**
