@@ -57,7 +57,7 @@ export const getSinglePost = async () => {
 
   const post = await getPost(id);
   const singlePostContainer = document.querySelector("#single-post");
-  templates.renderPostTemplates(post, singlePostContainer);
+  templates.renderPostTemplate(post, singlePostContainer);
 };
 
 /**
