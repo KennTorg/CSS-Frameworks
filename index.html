@@ -6,13 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/dist/css/styles.css" />
         <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+        <script src="/src/js/index.mjs" defer type="module"></script>
         <title>Social Media</title>
     </head>
     <body class="bg-light">
+
+        <!-- Header-->
         <header>
-            <nav class="navbar navbar-expand-md navbar-light bg-dark">
+            
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <!-- Navbar -->
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/index.html">Logo</a>
+                    <a class="navbar-brand" href="/">Logo</a>
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -24,13 +29,30 @@
                     >
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                        <form class="d-flex">
+                <!-- Navbar collapsed-->
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="/">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/pages/profile/">Profile</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/pages/login/">Login</a>
+                          </li>
+                        </ul>
+                      </div>
+                    <!-- Search -->
+                        <form class="d-flex" role="search" id="search">
                             <input
                                 class="form-control me-2"
                                 type="search"
                                 placeholder="Search"
                                 aria-label="Search"
+                                id="searchInput"
+                                required
+                                minlength="3"
                             />
                             <button class="btn btn-outline-primary" type="submit">Search</button>
                         </form>
@@ -38,42 +60,45 @@
                 </div>
             </nav>
         </header>
-        <main class="home-main-md">
-            <section class="row m-3">
-                <div class="col column-1 d-none d-md-block">
-                    <div class="p-3 bg-white rounded min-vh-100 d-flex justify-content-center">
-                        <ul class="nav flex-column mb-auto">
-                            <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-muted">Home</a></li>
-                            <li class="nav-item"><a href="/pages/profile/index.html" class="nav-link px-2 text-muted">Profile</a></li>
-                            <li class="nav-item"><a href="/pages/login/index.html" class="nav-link px-2 text-muted">Login</a></li>
-                        </ul>
-                    </div>
-                </div>
-            
-                <div class="col-md-6 column-2">
-                    <div class="p-3 bg-white rounded min-vh-100 d-flex justify-content-center">
-                        <h3>Feed</h3>
-                        <div class="flex-column"></div>
-                    </div>
-                </div>
-            
-                <div class="col column-3 d-none d-md-block">
-                    <div class="p-3 bg-white rounded min-vh-100 d-flex justify-content-center">
-                        <h3>Contacts</h3>
-                    </div>
-                </div>
 
-            </section>
-            <div class="container">
+        <main class="flex-grow-1 d-flex justify-content-center mt-5" style="height: 300px;">
+            <div class="flex-column bg-white shadow rounded mt-3 w-50 ">
+                <div class="container-fluid d-flex justify-content-center">
+                <!-- Welcome-->
+                    <div class="d-flex flex-column">
+                        <h2 class="mt-3">Welcome to Social Media</h2>
+                        <div class="d-flex justify-content-around mt-5 ">
+                            <a href ="pages/login/">
+                                <button class="btn btn-primary">Log In</button>
+                            </a>
+                            <a href="pages/register/">
+                                <button class="btn btn-secondary">Register</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
                 <footer class="py-3 my-4">
-                  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-muted">Home</a></li>
-                    <li class="nav-item"><a href="/pages/profile/index.html" class="nav-link px-2 text-muted">Profile</a></li>
-                    <li class="nav-item"><a href="/pages/login/index.html" class="nav-link px-2 text-muted">Login</a></li>
-                  </ul>
-                  <p class="text-center text-muted">© 2022 KennTorg</p>
+                    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link px-2 text-muted">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/profile/" class="nav-link px-2 text-muted"
+                                >Profile</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pages/login/" class="nav-link px-2 text-muted"
+                                >Login</a
+                            >
+                        </li>
+                    </ul>
+                    <p class="text-center text-muted">© 2022 KennTorg</p>
                 </footer>
-              </div>
+            </div>
         </main>
     </body>
 </html>

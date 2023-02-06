@@ -7,15 +7,14 @@
         <link rel="stylesheet" href="/dist/css/styles.css" />
         <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
         <script src="/src/js/index.mjs" defer type="module"></script>
-        <title>Social Media | Profile</title>
+        <title>Social Media | Edit Profile</title>
     </head>
     <body class="bg-light">
-        
         <!-- HEADER -->
         <header>
             
             <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <!-- Navbar -->
+                <!-- Nav -->
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">Logo</a>
                     <button
@@ -29,7 +28,7 @@
                         
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!-- Navbar collapsed -->
+                    <!-- Nav collaps -->
                     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                         <ul class="navbar-nav mr-auto">
                           <li class="nav-item active">
@@ -58,9 +57,7 @@
             </nav>
         </header>
         <!-- PROFILE MAIN -->
-        <main class="home-main">
-
-            <!-- SIDEBAR -->
+        <main class="home-main-md">
             <section class="row m-3">
                 <div class="col column-1 d-none d-md-block">
                     <div class="p-3 bg-white shadow rounded min-vh-100 d-flex justify-content-center">
@@ -106,90 +103,71 @@
                               </div>
                         </div>
                     </div>
-                    <!-- CREATE POST -->
-                <div class="col-md-6 column-2 mt-3 w-100">
-                     <div class="p-3 bg-white shadow rounded d-flex justify-content-center">
-                         <div class="post-container">
-
-                             <form id="createPost">
-                                <div class="form-group mb-3">
-                                    <label for="title">Title</label>
-                                     <input class="form-control" type="text" name="title" required>
-                                 </div>
-
-                                <div class="form-group mb-3">
-                                    <label for="body">Body</label>
-                                    <textarea class="form-control" name="body" required></textarea>
+                    <!-- Feed -->
+                    <div class="Feed flex-column bg-white shadow rounded mt-3">
+                        <!-- Create post -->
+                        <div class="p-3 bg-white rounded d-flex justify-content-center">
+                            <div class="post-container">
+                                <div class="mb-3">
+                                  <label for="write-post" class="form-label"></label>
+                                  <textarea class="form-control form-control-lg" id="write-post" rows="3" placeholder="What's up?"></textarea>
                                 </div>
-
-                                <div class="form-group mb-3">
-                                    <label for="tags">Tags</label>
-                                    <input class="form-control" type="text" name="tags">
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <label for="media">Media</label>
-                                    <input class="form-control" type="url" name="media">
-                                </div>
-                
-                                <button class="btn btn-primary">Create Post</button>
-                            </form>
+                                <button class="btn btn-primary">Post</button>
+                              </div>
+                          </div>
+                          <!-- Posts Feed -->
+                        <div class="heading text-center mt-4">
+                        <h3>Feed</h3>
                         </div>
+                        <!-- Posts Displaying here-->
+                        <div class="container-fluid" id="posts"></div>
                     </div>
-                        <!-- POST FEED -->
-                        <div class="Feed flex-column bg-white shadow rounded mt-3">
-                            <div class="heading text-center">
-                                <h3 class="p-3">Feed</h3>
+                </div>
+                <!-- Contacts -->
+                <div class="col column-3 d-none d-md-block">
+                    <div class="p-3 bg-white shadow rounded min-vh-100 text-center">
+                        <h3>Contacts</h3>
+                        <div class="d-inline-flex p-2">
+                            <div class="Friends">
+                                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                                <div class="d-flex flex-column ml-2"><span class="font-weigth-bold">John Doe</span></div>
                             </div>
-                            <div class="container-fluid" id="posts"></div>                      
+                        </div>
+                        <div class="d-inline-flex p-2">
+                            <div class="Friends">
+                                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                                <div class="d-flex flex-column ml-2"><span class="font-weigth-bold">John Doe</span></div>
+                            </div>
+                        </div>
+                        <div class="d-inline-flex p-2">
+                            <div class="Friends">
+                                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                                <div class="d-flex flex-column ml-2"><span class="font-weigth-bold">John Doe</span></div>
+                            </div>
+                        </div>
+                        <div class="d-inline-flex p-2">
+                            <div class="Friends">
+                                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                                <div class="d-flex flex-column ml-2"><span class="font-weigth-bold">John Doe</span></div>
+                            </div>
+                        </div>
+                        <div class="d-inline-flex p-2">
+                            <div class="Friends">
+                                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                                <div class="d-flex flex-column ml-2"><span class="font-weigth-bold">John Doe</span></div>
+                            </div>
+                        </div>
+                        <div class="d-inline-flex p-2">
+                            <div class="Friends">
+                                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
+                                <div class="d-flex flex-column ml-2"><span class="font-weigth-bold">John Doe</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
- 
-<!-- CONTACTS -->
-<div class="col column-3 d-none d-md-block">
-    <div class="p-3 bg-white shadow rounded min-vh-100 text-center">
-        <h3>Contacts</h3>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-        <div class="d-inline-flex p-2">
-            <div class="Friends">
-                <img src="/images/profile/blank-profile-picture-g975e77de3_1280.png" width="75" class="rounded-circle">
-                <div class="d-flex flex-column ml-2"><span class="font-wigth-bold">John Doe</span></div>
-            </div>
-        </div>
-    </div>
-</div>
-                </section>
-                <div class="container">
+            </section>
+            <!-- FOOTER-->
+            <div class="container">
                 <footer class="py-3 my-4">
                     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                         <li class="nav-item">

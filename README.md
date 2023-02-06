@@ -1,3 +1,10 @@
-# CSS-Frameworks
+# JS2 Correction
 
-This is my CA for CSS-Frameworks.
+## Create Post
+
+- SetCreatePostFormListener adedd "()"
+- Function createPost added postData.tags
+- SetUpdatePostFormListener added "()"
+- Display Single Post
+- Update Post
+- Delete Post
