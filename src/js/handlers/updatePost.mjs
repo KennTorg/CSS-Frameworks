@@ -30,7 +30,7 @@ export async function setUpdatePostFormListener() {
       // Send to the API
       await updatePost(post);
       form.reset();
-      location.href = `/profile/index.html`;
+      location.href = `/profile/`;
     });
   }
 }
